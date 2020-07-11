@@ -137,11 +137,11 @@ If the user doesn't provide a name for the players, then it will assign a name t
         playerOne.name = prompt('Please enter player 1 name:');
         playerTwo.name = prompt('Please enter player 2 name:');
     
-        if (playerOne.name === '') {
+        if (playerOne.name === '' || playerOne.name === null) {
             playerOne.name = 'Player 1';
         }
     
-        if (playerTwo.name === '') {
+        if (playerTwo.name === '' || playerTwo.name === null) {
             playerTwo.name = 'Player 2';
         }
     
@@ -183,9 +183,7 @@ function shuffle(array) {
     }
 }
 
-
-
 let menu = new Menu;
 
-// menu.newGame();
-// menu.start();
+menu.newGame();
+menu.start();
